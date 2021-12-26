@@ -2,9 +2,9 @@
 A spammer bot for various Discord bots, including 8k Bot.
 
 ## Bots supported
-* 8k Bot
-* Cactus
-* Cycles
+* [8k Bot](https://top.gg/bot/783346270290968606)
+* [Cactus](https://cactus-bot.codingcactus.codes/)
+* [Cycles](https://top.gg/bot/781939317450342470)
 
 ## How to use
 To use this tool:

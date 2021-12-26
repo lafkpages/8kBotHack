@@ -1,7 +1,8 @@
-import time
+import time, sys
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import NoSuchElementException, ElementNotInteractableException
+from selenium.common.exceptions import WebDriverException
 from argupy import STR, Args
 
 
@@ -9,6 +10,7 @@ from argupy import STR, Args
 EXIT CODES:
 3  - User interrupted before start (Ctrl + C)
 2  - User interrupted while running
+4  - Error starting chromedriver
 '''
 
 
@@ -73,7 +75,10 @@ def exit_spammer(code=0, msg=True):
   if msg:
     debug('Quitting...')
 
-  DRIVER.quit()
+  try:
+    DRIVER.quit()
+  except:
+    pass
 
   exit(code)
 
@@ -81,6 +86,7 @@ def exit_spammer(code=0, msg=True):
 DEFAULT_CHAT_URL = 'https://discord.com/channels/783422192720412694/910280045178810388'
 
 args = Args()
+args.setarg('--chromedriver', STR, './chromedriver96', '-d')
 args.setarg('--chat-url', STR, DEFAULT_CHAT_URL, '-c')
 args.setarg('--username', STR, '', '-u')
 args.setarg('--verbose', short='-v')
@@ -97,6 +103,7 @@ args.setarg('--dont-do-8kbot')
 args.setarg('--8k-headset')
 args.setarg('--8k-take')
 
+DRIVER_PATH = args.arg('--chromedriver')
 CHAT_URL    = args.arg('--chat-url')
 USERNAME    = args.arg('--username')
 VERBOSE     = args.arg('--verbose')
@@ -116,7 +123,16 @@ DO8KTAKE    = args.arg('--8k-take')
 
 debug('Starting chromedriver...')
 
-DRIVER = webdriver.Chrome('./chromedriver96')
+try:
+  DRIVER = webdriver.Chrome(DRIVER_PATH)
+except WebDriverException:
+  print('There was an error starting the chromedriver.', file=sys.stderr)
+  print('This may be because an incorrect value was passed through the --chromedriver argument,', file=sys.stderr)
+  print('or because a valid chromedriver hasn\'t been downloaded.', file=sys.stderr)
+  print('\nFor more info, visit https://github.com/lafkpages/8kBotHack', file=sys.stderr)
+
+  exit_spammer(4, False)
+
 DRIVER.set_window_position(0, 0)
 DRIVER.set_window_size(1120, 1080)
 
@@ -250,7 +266,7 @@ try:
     for msg in message:
       try:
         send_message(msg)
-      except:
+      except (ElementNotInteractableException, NoSuchElementException):
         pass
 
     time.sleep(10)

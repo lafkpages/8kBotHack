@@ -7,8 +7,8 @@ A spammer bot for various Discord bots, including 8k Bot.
 * [Cycles](https://top.gg/bot/781939317450342470)
 
 ## How to use
-To use this tool:
 
+#### To use this spammer tool
 1. Click on the green button that says _Code_, and then click _Download ZIP_
 2. Once downloaded, extract the ZIP into another folder
 3. If you are on Mac
@@ -27,6 +27,14 @@ To use this tool:
 8. Run the Python script: `python3 main.py`
      - If you get an error similar to `python3: command not found`, try the same as above but with just `python`, without the three
      - To spam other bots, and other options, check the [arguments](#arguments) section
+
+#### To close the chromedriver
+Sometimes, if an error occurs, the program exits but the chromedriver windows stays open.
+To close it:
+
+1. If you're on Windows, you can use Task Manager to look for a process called `chromedriver` or `chromedriver96` and end it
+2. If you're not on Windows, in the same folder where you downloaded this tool, in a command line type `./quit.sh`
+3. If step 2 doesn't work and you're not on Windows, just go to the chromedriver window and if you're on macOS, press <kbd>Cmd</kbd> + <kbd>Q</kbd>, or otherwise, just close the window
 
 ## Arguments
 There are some extra arguments you can pass to the program for it to do different things.

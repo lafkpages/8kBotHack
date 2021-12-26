@@ -32,13 +32,24 @@ To use this tool:
 There are some extra arguments you can pass to the program for it to do different things.
 A table with all the arguments can be found here.
 
-| Argument                        | Meaning/function                                                          |
-| ------------------------------- | ------------------------------------------------------------------------- |
-| `--chromedriver`                | Use this to specify a chromedriver file. If this argument is not present, defaults to `chromedriver96` in current folder. |
-| `--chat-url` or `-c`            | Specify a Discord channel URL in which to spam.                           |
-| `--username` or `-u`            | Specify your Discord username to autocomplete in the login.               |
-| `--verbose` or `-v`             | Print messages to the command line, telling you what's happening.         |
-| `` |  |
+| Argument                         | Meaning/function                                                                          |
+| -------------------------------- | ----------------------------------------------------------------------------------------- |
+| `--chromedriver`                 | Use this to specify a chromedriver file. If this argument is not present, defaults to `chromedriver96` in current folder. |
+| `--chat-url` or `-c`             | Specify a Discord channel URL in which to spam. Default is [this channel](https://discord.com/channels/783422192720412694/910280045178810388). |
+| `--username` or `-u`             | Specify your Discord username to autocomplete in the login.                               |
+| `--verbose` or `-v`              | Print messages to the command line, telling you what's happening.                         |
+| `--dont-get-daily-coins` or `-D` | Don't get the [8k Bot](https://top.gg/bot/783346270290968606) daily coins (`8k! daily`).  |
+| `--cactus` or `-C`               | Spams messages like `=grow` for the [Cactus bot](https://cactus-bot.codingcactus.codes/). |
+| `--cactus-daily`                 | Gets the [Cactus bot](https://cactus-bot.codingcactus.codes/) daily growth (`=daily`).    |
+| `--cycles`                       | Spams messages like `&c` and `&p` for the [Cycles bot](https://top.gg/bot/781939317450342470). |
+| `--cycles-daily`                 | Gets the [Cycles bot](https://top.gg/bot/781939317450342470) daily prizes (`&daily`).     |
+| `--cycles-verify`                | Now and then sends `&verify 0` messages, from 0 to 10, for the [Cycles bot](https://top.gg/bot/781939317450342470). |
+| `--cycles-coffee`                | Now and then sends `&use coffee` messages for the [Cycles bot](https://top.gg/bot/781939317450342470). |
+| `--cycles-finger`                | Now and then sends `&use finger` messages for the [Cycles bot](https://top.gg/bot/781939317450342470). |
+| `--cycles-phone`                 | Now and then sends `&use phone` messages for the [Cycles bot](https://top.gg/bot/781939317450342470). |
+| `--dont-do-8kbot`                | Disables [8k Bot](https://top.gg/bot/783346270290968606) messages like `8k! beg` and `8k! work`. |
+| `--8k-headset`                   | Now and then sends `8k! use headset` messages for [8k Bot](https://top.gg/bot/783346270290968606). |
+| `--8k-take`                      | Now and then sends `take` messages for [8k Bot](https://top.gg/bot/783346270290968606).   |
 
 If an argument has spaces, put double quotes around it, like this:
 ``` bash

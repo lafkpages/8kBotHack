@@ -55,3 +55,13 @@ If an argument has spaces, put double quotes around it, like this:
 ``` bash
 python3 main.py --username "Example user"
 ```
+
+## Exit codes
+**Note:** Most people won't really care about this part.
+**Note:** Another list of exit codes can be found in [a comment in the source code](main.py).
+
+| Exit code | Meaning                                                                         |
+| --------- | ------------------------------------------------------------------------------- |
+| `2`       | User interrupted while messages where being spammed.                            |
+| `3`       | User interrupted before started spamming messages.                              |
+| `4`       | Error starting chromedriver. This can be caused by an incorrect value in the [`--chromedriver` argument](#arguments) |

@@ -1,6 +1,10 @@
 # 8kBotHack
 A spammer bot for various Discord bots, including 8k Bot.
 
+## Important!
+This tool is kind of a self-bot. Self-bots are not allowed on Discord, and if you're caught, can result in a permanent ban.
+You can read more about this [here](https://support.discord.com/hc/en-us/articles/115002192352-Automated-user-accounts-self-bots-).
+
 ## Bots supported
 * [8k Bot](https://top.gg/bot/783346270290968606)
 * [Cactus](https://cactus-bot.codingcactus.codes/)
